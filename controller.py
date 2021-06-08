@@ -66,7 +66,6 @@ class ColumnSave:
     def __init__(self):
         self.success = "Данные успешно сохранены"
     def app(self, db, session, ya_id, ya_token, event):
-        print(event.caption)
         if event.photo and event.caption != None:
             ya_session = YaDisk(id=ya_id, token=ya_token)
             date_folder = datetime.today().strftime("%d.%m.%Y")
@@ -103,8 +102,6 @@ class ColumnSave:
 
             with open(f"{f_obj}", "rb") as YaF_obj:
                 ya_session.upload(YaF_obj, ya_path.replace("media/", ""))
-                print(f_obj)
-                print(YaF_obj)
                 YaF_obj.close()
         
             send(session=session, user_id=event.from_user.id, message=self.success)

@@ -1,8 +1,8 @@
 ## Команды для создания базы и пользователя с правами на базу:
 ```
-CREATE USER brooks WITH PASSWORD 'amritta3113';
+CREATE USER 'beis_pet'@'localhost' IDENTIFIED BY 'amritta2103';
 CREATE DATABASE column_report;
-GRANT ALL PRIVILEGES ON DATABASE "column_report" TO brooks;
+GRANT ALL PRIVILEGES ON column_report.* TO 'brooks'@'localhost';
 ```
 
 ## Создание яндекс приложения
