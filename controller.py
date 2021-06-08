@@ -11,8 +11,7 @@ class Registration:
         self.start_message = "Из какой вы колонны?"
         self.double_registrate = "Вы уже зарегистрированны"
         self.column_error="Это не должно быть строкой!"
-        self.success = "Отлично, вы успешно зарегистрировались!\n"
-        self.success+="Пришлите мне фото или пачку фотографий и я отправлю их в хранилище"
+        self.success = 'Отлично, вы успешно зарегистрировались!\n Пришлите фотографию с подписью вида "борт  dd.mm.yyyy" и я скину их Лёше и Ире.'
 
 
     def app(self, db, session, event):
