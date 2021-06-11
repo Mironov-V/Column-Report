@@ -77,19 +77,19 @@ class ColumnSave:
             avto_folder = event.caption
             try:
                 # Создание папки с датой
-                ya_session.mkdir(f"/{date_folder}")
+                ya_session.mkdir(f"/column_report/{date_folder}")
             except:
                 pass
 
             try:
                 # Создание папки для колонны
-                ya_session.mkdir(f"/{date_folder}/Колонна-{column_folder}")
+                ya_session.mkdir(f"/column_report/{date_folder}/Колонна-{column_folder}")
             except:
                 pass
 
             try:
                 # Создание папки с номером авто
-                ya_session.mkdir(f"/{date_folder}/Колонна-{column_folder}/{avto_folder}")
+                ya_session.mkdir(f"/column_report/{date_folder}/Колонна-{column_folder}/{avto_folder}")
             except:
                 pass
 
@@ -97,7 +97,7 @@ class ColumnSave:
                 session=session, event=event, path='media/'
             )
 
-            ya_path = f"/{date_folder}/Колонна-{column_folder}/{avto_folder}/{f_obj}"
+            ya_path = f"/column_report/{date_folder}/Колонна-{column_folder}/{avto_folder}/{f_obj}"
 
             with open(f"{f_obj}", "rb") as YaF_obj:
                 ya_session.upload(YaF_obj, ya_path.replace("media/", ""))
